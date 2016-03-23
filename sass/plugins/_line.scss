@@ -1,0 +1,5 @@
+.line{
+	background: $line-bg;
+	height: 3px;
+  @include box-shadow(0 2px 3px rgba(189,189,189,.75));
+}

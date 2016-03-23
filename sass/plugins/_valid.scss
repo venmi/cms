@@ -1,0 +1,35 @@
+div.validate-error{
+	bottom: 20px;
+    border: 2px solid #C0C0C0;
+    @include border-radius(5px);
+    margin-bottom: 20px;
+    padding: 2px 6px;
+    background: #fff;
+    font-size: 12px;
+    position: absolute;
+    right: 0px;
+    z-index: 9;
+    max-width: 245px;
+    font-weight: normal;
+    color: $gray;
+    &::before,&::after{
+		content: "";
+	    height: 0;
+	    position: absolute;
+	    width: 0;
+    }
+    &::before{
+    	border-left: 8px solid transparent;
+	    border-right: 8px solid transparent;
+	    border-top: 8px solid #C0C0C0;
+	    bottom: -8px;
+	    left: 10px;
+    }
+    &::after{
+    	border-left: 6px solid transparent;
+	    border-right: 6px solid transparent;
+	    border-top: 8px solid #fff;
+	    bottom: -6px;
+	    left: 12px;
+    }
+}

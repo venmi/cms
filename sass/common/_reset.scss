@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input, textarea, button {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+  color: #333;
+  line-height: 1;
+  background-color: $bg-color;
+}
+img {
+  vertical-align: middle;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: ' ';
+}
+.container{
+  width: 1000px;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}

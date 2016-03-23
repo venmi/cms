@@ -1,0 +1,199 @@
+.news-title {
+	margin-bottom: 45px;
+	position: relative;
+	z-index: 1;
+
+	h3.title {
+		margin-top: 45px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		color: $dark;
+	}
+	p {
+		margin: 0;
+		color: $gray;
+	}
+	.search{
+		position: absolute;
+		top: 5px;
+		right: 2px;
+		width: 200px;
+		height: 30px;
+		background: $top-bg;
+		@include border-radius(15px);
+
+		img.search-icon{
+			width: 16px;
+			height: 16px;
+			float: left;
+			margin: 7px 8px 0 12px;
+		}
+		input.search-input{
+			width: 153px;
+			height: 18px;
+			margin-top: 6px;
+			border: 1px solid $search-border;
+			font-size: 12px;
+			padding: 0 8px;
+			line-height: 18px;
+			position: relative;
+			z-index: 2;
+			color: $search-color;
+			background: none;
+			@include border-radius(15px);
+
+		}
+		.radius-wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+
+			&:before {
+				@extend .radius-top-left;
+			}
+			&:after {
+				@extend .radius-top-right;
+			}
+			.radius {
+				&:before {
+					@extend .radius-bottom-left;
+				}
+				&:after {
+					@extend .radius-bottom-right;
+				}
+			}
+		}
+	}
+}
+.news-list {
+	ul.list {
+		width: 801px;
+		overflow: hidden;
+
+		li.item {
+			width: 246px;
+			height: 313px;
+			margin-right: 21px;
+			position: relative;
+			z-index: 1;
+			background: $white;
+			float: left;
+			margin-bottom: 50px;
+			@include border-radius(15px);
+
+			img.pic {
+				display: block;
+				width: 246px;
+				height: 140px;
+			}
+			a.pic-click{
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+				width: 246px;
+				height: 140px;
+				background: $white;
+				opacity: 0;
+				filter:alpha(opacity=0);
+			}
+			h3.title {
+				font-size: 14px;
+				line-height: 20px;
+				margin: 19px 25px 0;
+				font-weight: normal;
+				position: relative;
+				z-index: 2;
+
+				a {
+					color: $dark;
+					text-decoration: none;
+					display: block;
+					white-space:nowrap;
+			        text-overflow:ellipsis;
+			        overflow:hidden;
+
+					&:hover {
+						color: $a-hover;
+					}
+				}
+			}
+			p.cont{
+				margin: 9px 25px 0;
+				font-size: 12px;
+				line-height: 16px;
+				height: 48px;
+				position: relative;
+				z-index: 2;
+
+				a{
+					color: $gray;
+					text-decoration: none;
+					&:hover {
+						color: $a-hover;
+					}
+				}
+			}
+			.show {
+				margin: 26px 25px 0;
+
+				span.time {
+					float: left;
+					line-height: 1;
+					font-size: 12px;
+					color: $line-bg;
+				}
+				span.read {
+					float: right;
+					font-size: 12px;
+					color: $gray;
+
+					span.num {
+						float: right;
+						color: $a-hover;
+						margin-left: 8px;
+					}
+				}
+			}
+			img.arrow{
+				width: 35px;
+				height: 35px;
+				position: absolute;
+				left: 106px;
+				top: 123px;
+				z-index: 3;
+			}
+			.radius-wrap {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+
+				&:before {
+					@extend .radius-top-left;
+				}
+				&:after {
+					@extend .radius-top-right;
+				}
+				.radius {
+					&:before {
+						@extend .radius-bottom-left;
+					}
+					&:after {
+						@extend .radius-bottom-right;
+					}
+				}
+			}
+		}
+	}
+	.news-page{
+		margin-bottom: 50px;
+		text-align: center;
+	}
+}

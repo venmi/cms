@@ -1,0 +1,30 @@
+.top{
+  height: $top-height;
+  line-height: $top-height;
+  background-color: $white;
+  overflow: hidden;
+  text-align: right;
+  font-size: 0;
+  a{
+    color: $dark;
+    text-decoration: none;
+    font-size: 12px;
+    &:hover{
+      color: $a-hover;
+      &::after{
+        color: $dark;
+      }
+    }
+    &:after{
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      content: "/";
+      width: 19px;
+      text-align: center;
+    }
+  }
+  span.phone{
+    font-size: 12px;
+  }
+}

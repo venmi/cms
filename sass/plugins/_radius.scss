@@ -1,0 +1,67 @@
+%radius-common {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  content: ' ';
+  background: url(../images/radius_mask.png) no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.radius-top-left {
+  @extend %radius-common;
+  top: 0;
+  left: 0;
+  background-position: 0 0;
+}
+.radius-top-right {
+  @extend %radius-common;
+  top: 0;
+  right: 0;
+  background-position: -15px 0;
+}
+.radius-bottom-left {
+  @extend %radius-common;
+  bottom: 0;
+  left: 0;
+  background-position: 0 -15px;
+}
+.radius-bottom-right {
+  @extend %radius-common;
+  bottom: 0;
+  right: 0;
+  background-position: -15px -15px;
+}
+
+%radius-sign {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  content: ' ';
+  background: url(../images/radius_sign.png) no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.radius-sign-top-left {
+  @extend %radius-sign;
+  top: 0;
+  left: 0;
+  background-position: 0 0;
+}
+.radius-sign-top-right {
+  @extend %radius-sign;
+  top: 0;
+  right: 0;
+  background-position: -15px 0;
+}
+.radius-sign-bottom-left {
+  @extend %radius-sign;
+  bottom: 0;
+  left: 0;
+  background-position: 0 -15px;
+}
+.radius-sign-bottom-right {
+  @extend %radius-sign;
+  bottom: 0;
+  right: 0;
+  background-position: -15px -15px;
+}

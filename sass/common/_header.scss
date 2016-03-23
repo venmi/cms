@@ -1,0 +1,128 @@
+.header{
+  height: $header-height;
+  background-color: $header-bg;
+  font-size: 0;
+  a.logo{
+    @extend .inline-block;
+    margin-top: 16px;
+    float: left;
+    img{
+      width: 123px;
+      height: 48px;
+    }
+  }
+  .nav{
+    @extend .inline-block;
+    line-height: 1;
+    margin: 31px 0 0 55px;
+    float: left;
+    li{
+      display: inline;
+      font-size: 18px;
+      margin-right: 43px;
+      a{
+        text-decoration: none;
+        color: $gray;
+        &:hover{
+          color: $a-hover;
+        }
+      }
+    }
+  }
+  .sign{
+    float: right;
+    width: 126px;
+    width: 76px;
+    height: 24px;
+    border: 1px solid $border-color;
+    border-radius: 25px;
+    background: url(../images/sign_icon.png) no-repeat 11px 4px;
+    padding-left: 30px;
+    margin-top: 28px;
+    // .sign-in{
+    //   &:after{
+    //     @extend .inline-block;
+    //     content: "|";
+    //     width: 20px;
+    //     text-align: center;
+    //   }
+    // }
+    a{
+      font-size: 16px;
+      color: $dark;
+      text-decoration: none;
+      line-height: 24px;
+      &:hover{
+        color: $a-hover;
+        &::after{
+          color: $dark;
+        }
+      }
+    }
+  }
+  dl.sign-make{
+    width: 160px;
+    margin: 20px 0;
+    float: right;
+
+    dt{
+      width: 40px;
+      height: 40px;
+      float: left;
+      position: relative;
+      z-index: 1;
+      img.pic{
+        width: 38px;
+        height: 38px;
+        margin: 1px;
+      }
+      .warp{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        top: 0;
+        z-index: 2;
+      }
+    }
+    dd{
+      width: 111px;
+      float: right;
+      padding: 3px 0 0;
+      margin: 0;
+      h3.title{
+        font-size: 14px;
+        color: $dark;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 0 5px;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        *overflow: hidden;
+        width: 111px;
+        a{
+          color: $dark;
+          text-decoration: none;
+          display: block;
+        }
+      }
+      a.sign-out{
+        width: 50px;
+        height: 18px;
+        border: 1px solid $signout-border-color;
+        margin-left: 1px;
+        display: block;
+        color: $dark;
+        @include border-radius(15px);
+        background: url(../images/sign/tuichu.png) no-repeat 4px 2px;
+        padding-left: 17px;
+        font-size: 12px;
+        line-height: 1;
+        padding-top: 2px;
+        text-decoration: none;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+ul.crumbs{
+	margin-bottom: 17px;
+	li{
+		line-height: 1;
+		font-size: 14px;
+		font-weight: bold;
+		@extend .inline-block;
+		color: $gray;
+		a{
+			color: $gray;
+			text-decoration: none;
+
+			&:after{
+				content: ">";
+				padding-left: 3px;
+			}
+		}
+		&.active{
+			color: $a-hover;
+		}
+	}
+}
